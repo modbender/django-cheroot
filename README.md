@@ -28,10 +28,10 @@ python manage.py cheroot
 Default arguments
 
 ```shell
-python manage.py cheroot -h 127.0.0.1 -p 8000 -w 40 -t 30 -c 20
+python manage.py cheroot -ip 127.0.0.1 -p 8000 -w 40 -t 30 -c 20
 ```
 ```shell
-python manage.py cheroot --host 127.0.0.1 --port 8000 --maxthreads 40 --minthreads 30 --connections 20
+python manage.py cheroot --hostip 127.0.0.1 --port 8000 --maxthreads 40 --minthreads 30 --connections 20
 ```
 
 ## Arguments
