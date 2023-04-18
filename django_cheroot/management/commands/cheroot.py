@@ -27,7 +27,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('-p', '--port', type=int,
                             help='Server Port')
-        parser.add_argument('-h', '--host', type=str, help='Host IP')
+        parser.add_argument('-ip', '--hostip', type=str, help='Host IP')
         parser.add_argument('-t', '--minthreads', type=int,
                             help='Min threads in Thread Pool for CherryPy Server')
         parser.add_argument('-w', '--maxthreads', type=int,
@@ -37,7 +37,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         port = options['port'] or 8000
-        host = options['host'] or '127.0.0.1'
+        host = options['hostip'] or '127.0.0.1'
         numthreads = options['minthreads'] or 20
         max_threads = options['maxthreads'] or 40
         connections = options['connections'] or 20

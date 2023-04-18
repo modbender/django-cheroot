@@ -38,7 +38,7 @@ python manage.py cheroot --host 127.0.0.1 --port 8000 --maxthreads 40 --minthrea
 
 | Name                       | Short | Long          | Type | Default   |
 | -------------------------- | ----- | ------------- | ---- | --------- |
-| IP Address                 | -h    | --host        | str  | 127.0.0.1 |
+| IP Address                 | -ip   | --hostip      | str  | 127.0.0.1 |
 | Port                       | -p    | --port        | int  | 8000      |
 | Max Worker Threads         | -w    | --maxthreads  | int  | 40        |
 | Min Threads in Thread Pool | -t    | --minthreads  | int  | 30        |

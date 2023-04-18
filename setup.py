@@ -4,7 +4,7 @@ README = open('README.md').read()
 
 setuptools.setup(
     name='django-cheroot',
-    version='1.0.1',
+    version='1.0.2',
     url='https://github.com/modbender/django-cheroot',
     description='Django Cheroot provides a bridge to use Cheroot which is the high-performance, pure-Python HTTP server used by CherryPy',
     long_description=README,
