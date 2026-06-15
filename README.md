@@ -1,35 +1,42 @@
 # Django Cheroot
 
-Django Cheroot provides a bridge to use [Cheroot](https://github.com/cherrypy/cheroot) which is the high-performance, pure-Python HTTP server used by CherryPy.
+Django Cheroot provides a bridge to use [Cheroot](https://github.com/cherrypy/cheroot), the high-performance, pure-Python HTTP server used by CherryPy, to serve your Django WSGI application.
 
-_Alternative for other WSGI servers like Gunicorn, etc._
+_An alternative to other WSGI servers like Gunicorn, uWSGI, etc._
+
+## Documentation
+
+Full documentation lives at **[modbender.in/django-cheroot](https://modbender.in/django-cheroot/)**.
 
 ## Install
 
-`pip install django-cheroot`
+```shell
+pip install django-cheroot
+```
 
-In `settings.py` add application to `INSTALLED_APPS`
+In `settings.py`, add the app to `INSTALLED_APPS`:
 
 ```python
 INSTALLED_APPS = [
-  ...
-  'django_cheroot',
+    ...,
+    "django_cheroot",
 ]
 ```
 
 ## Usage
 
-Simplest usage with default settings is:
+The simplest usage, with default settings:
 
 ```shell
 python manage.py cheroot
 ```
 
-Default arguments
+With explicit arguments (these are the defaults):
 
 ```shell
 python manage.py cheroot -ip 127.0.0.1 -p 8000 -w 40 -t 30 -c 20
 ```
+
 ```shell
 python manage.py cheroot --hostip 127.0.0.1 --port 8000 --maxthreads 40 --minthreads 30 --connections 20
 ```
@@ -43,3 +50,11 @@ python manage.py cheroot --hostip 127.0.0.1 --port 8000 --maxthreads 40 --minthr
 | Max Worker Threads         | -w    | --maxthreads  | int  | 40        |
 | Min Threads in Thread Pool | -t    | --minthreads  | int  | 30        |
 | Max Queued Connections     | -c    | --connections | int  | 20        |
+
+## Compatibility
+
+| | Supported |
+| --- | --- |
+| Python | 3.8+ |
+| Django | 4.2, 5.x, 6.0 |
+| Cheroot | 10+ |
